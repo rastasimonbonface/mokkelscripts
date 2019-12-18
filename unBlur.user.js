@@ -6,12 +6,12 @@
 // @icon         https://forum.mannenzaken.nl/favicon.ico
 // @author       Rasta
 // @match        https://forum.mannenzaken.nl/*
-// @require      https://code.jquery.com/jquery-3.2.1.min.js
-// @require      https://code.jquery.com/jquery-migrate-3.0.0.min.js
 // @grant        none
 // ==/UserScript==
 (function() {
-    $('.blixem-nsfw-text-container').remove()
-    $('.blixem-nsfw').addClass('is-sfw')
-    $('.blixem-nsfw').removeClass('is-nsfw')
+  var telement = document.getElementsByClassName("blixem-nsfw-text-container");
+  var nelement = document.getElementsByClassName("blixem-nsfw");
+  [...telement].map(n => n && n.remove());
+  [...nelement].map(n => n && n.classList.add("is-sfw"));
+  [...nelement].map(n => n && n.classList.remove("is-nsfw"));
 })();

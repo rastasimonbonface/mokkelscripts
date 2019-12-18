@@ -6,13 +6,11 @@
 // @icon         https://forum.mannenzaken.nl/favicon.ico
 // @author       Rasta
 // @match        https://forum.mannenzaken.nl/*
-// @require      https://code.jquery.com/jquery-3.2.1.min.js
-// @require      https://code.jquery.com/jquery-migrate-3.0.0.min.js
 // @grant        none
 // ==/UserScript==
 var css = "";
 css += [
-		"div.canvas-layout-container > .mokkels-advertentie.canvas-widget{",
+		"div.canvas-layout-container > .mokkels-advertentie.canvas-widget, div.widget-content > .mokkels-advertentie {",
 		"	display: none;",
 		"}"
 	].join("\n");
